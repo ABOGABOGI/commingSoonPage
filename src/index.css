@@ -1,0 +1,400 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* RESET CSS Start*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* RESET CSS End */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #30116f;
+  font-family: "Roboto", sans-serif;
+}
+
+.bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+  background: #f1f1f1;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: flying 10s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+  width: 370px;
+  height: 370px;
+  left: 50%;
+  animation-duration: 10s;
+}
+.bubble:nth-child(2) {
+  width: 250px;
+  height: 230px;
+  left: 7%;
+  animation-duration: 25s;
+  animation-delay: 1s;
+}
+.bubble:nth-child(3) {
+  width: 230px;
+  height: 210px;
+  left: 10%;
+  animation-duration: 19s;
+  animation-delay: 2s;
+}
+.bubble:nth-child(4) {
+  width: 280px;
+  height: 250px;
+  left: 20%;
+  animation-duration: 16s;
+}
+.bubble:nth-child(5) {
+  width: 370px;
+  height: 370px;
+  left: 50%;
+  animation-duration: 22s;
+}
+.bubble:nth-child(6) {
+  width: 270px;
+  height: 250px;
+  left: 70%;
+  animation-duration: 10s;
+}
+.bubble:nth-child(7) {
+  width: 100px;
+  height: 100px;
+  left: 30%;
+  animation-duration: 14s;
+}
+.bubble:nth-child(8) {
+  width: 400px;
+  height: 360px;
+  left: 80%;
+  animation-duration: 5s;
+}
+.bubble:nth-child(9) {
+  width: 300px;
+  height: 300px;
+  left: 90%;
+  animation-duration: 15s;
+}
+.bubble:nth-child(10) {
+  width: 430px;
+  height: 420px;
+  left: 0;
+  animation-duration: 23s;
+}
+
+@keyframes flying {
+  0% {
+    bottom: -100px;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    bottom: 1080px;
+    transform: translateX(-200px);
+  }
+}
+
+.main {
+  position: relative;
+  width: 50%;
+  height: 67%;
+  margin: 5% auto;
+  display: grid;
+  grid-template-rows: 100px auto;
+  background: inherit;
+  border-radius: 13px;
+  box-shadow: 7px 9px 3px 1px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f0eaff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b0c0e0;
+}
+
+.header {
+  padding: 30px;
+  padding-left: 0;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: auto 40%;
+  color: #6519ff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+}
+
+.main-section {
+  margin-left: 5%;
+  color: #6519ff;
+  height: 100%;
+  width: 100%;
+  background: url("https://res.cloudinary.com/toga-insure/image/upload/v1586265015/CommingSoonPage/rocket_launch_hrpgd5.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: 85% 60%;
+}
+
+.main-section__block {
+  padding-top: 10%;
+}
+
+.main-section__block h1 {
+  font-size: 38px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.main-section__block .main-title {
+  font-weight: 900;
+  font-size: 58px;
+  margin: 10px 0px;
+}
+
+.sub-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 30%;
+}
+
+.sub-form,
+.error,
+.success {
+  margin: 20px 0;
+}
+
+.error {
+  color: tomato;
+}
+
+.success {
+  color: green;
+}
+
+.sub-form input,
+.sub-form button {
+  display: block;
+  height: 40px;
+  border: none;
+}
+
+.sub-form input {
+  background: #f1f8fa;
+  padding-left: 20px;
+  outline: none;
+}
+
+.sub-form button {
+  background: #6519ff;
+  color: white;
+  font-size: 16px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1145px) {
+  .sub-form {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 928px) {
+  .sub-form {
+    width: 100%;
+    grid-template-columns: auto;
+    margin-top: 50px;
+  }
+
+  .sub-form input {
+    background: #ffffff;
+  }
+}
