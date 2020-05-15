@@ -10,10 +10,10 @@ function CustomChatbot(props) {
     headerBgColor: "inherit",
     headerFontColor: "#6B1787",
     headerFontSize: "24px",
-    botBubbleColor: "#00B2B2",
-    botFontColor: "#fff",
-    userBubbleColor: "#fff",
-    userFontColor: "#4c4c4c",
+    botBubbleColor: "#fff",
+    botFontColor: "#6B1787",
+    userBubbleColor: "#6B1787",
+    userFontColor: "#fff",
   };
 
   const config = {
@@ -21,13 +21,9 @@ function CustomChatbot(props) {
     minHeight: "100%",
     margin: "auto",
     floating: false,
-    bubbleStyle: {
-      background: "white",
-      borderRadius: "4px",
-      color: "black",
-      width: "80%",
-    },
     headerTitle: "Toga",
+    enableMobileAutoFocus: true,
+    botDelay: 1500,
     botAvatar:
       "https://res.cloudinary.com/toga-insure/image/upload/v1589457128/CommingSoonPage/togalogoart_uqekbz.jpg",
   };
@@ -111,7 +107,9 @@ function CustomChatbot(props) {
     },
     {
       id: "Not interested",
-      message: "Sad to hear {previousValue} :( See you next time..",
+      message: ({ steps }) => {
+        return `Sad to hear ${steps["Waiting user input for name"].value}:( See you next time..`;
+      },
       end: true,
     },
     {
@@ -121,7 +119,9 @@ function CustomChatbot(props) {
     },
     {
       id: "Done",
-      message: "Thanks for your time, enjoy the rest of your day!!",
+      message: ({ steps }) => {
+        return `Thanks for your time ${steps["Waiting user input for name"].value} :), enjoy the rest of your day!!`;
+      },
       end: true,
     },
   ];

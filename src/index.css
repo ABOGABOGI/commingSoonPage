@@ -162,131 +162,13 @@ body {
   padding: 0;
   background: #30116f;
   font-family: "Roboto", sans-serif;
-}
-
-.bubbles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
   overflow: hidden;
-  top: 0;
-  left: 0;
-}
-
-.bubble {
-  position: absolute;
-  bottom: 0;
-  background: #f1f1f1;
-  border-radius: 50%;
-  opacity: 0.5;
-  animation: flying 10s infinite ease-in;
-}
-
-.bubble:nth-child(1) {
-  width: 370px;
-  height: 370px;
-  left: 50%;
-  animation-duration: 10s;
-}
-.bubble:nth-child(2) {
-  width: 250px;
-  height: 230px;
-  left: 7%;
-  animation-duration: 25s;
-  animation-delay: 1s;
-}
-.bubble:nth-child(3) {
-  width: 230px;
-  height: 210px;
-  left: 10%;
-  animation-duration: 19s;
-  animation-delay: 2s;
-}
-.bubble:nth-child(4) {
-  width: 280px;
-  height: 250px;
-  left: 20%;
-  animation-duration: 16s;
-}
-.bubble:nth-child(5) {
-  width: 370px;
-  height: 370px;
-  left: 50%;
-  animation-duration: 22s;
-}
-.bubble:nth-child(6) {
-  width: 270px;
-  height: 250px;
-  left: 70%;
-  animation-duration: 10s;
-}
-.bubble:nth-child(7) {
-  width: 100px;
-  height: 100px;
-  left: 30%;
-  animation-duration: 14s;
-}
-.bubble:nth-child(8) {
-  width: 400px;
-  height: 360px;
-  left: 80%;
-  animation-duration: 5s;
-}
-.bubble:nth-child(9) {
-  width: 300px;
-  height: 300px;
-  left: 90%;
-  animation-duration: 15s;
-}
-.bubble:nth-child(10) {
-  width: 430px;
-  height: 420px;
-  left: 0;
-  animation-duration: 23s;
-}
-
-@keyframes flying {
-  0% {
-    bottom: -100px;
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(100px);
-  }
-  100% {
-    bottom: 1080px;
-    transform: translateX(-200px);
-  }
 }
 
 .main {
-  position: relative;
   width: 50%;
-  height: 67%;
-  margin: 5% auto;
-  display: grid;
-  grid-template-rows: 100px auto;
-  background: inherit;
+  margin: 5% auto 3% auto;
   border-radius: 13px;
-  box-shadow: 7px 9px 3px 1px rgba(0, 0, 0, 0.2);
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #fff;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #f0eaff;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #b0c0e0;
 }
 
 .header {
@@ -324,77 +206,68 @@ body {
   background-position: 85% 60%;
 }
 
-.main-section__block {
-  padding-top: 10%;
+.bottom-section {
+  width: 50%;
+  margin: 10px auto;
 }
 
-.main-section__block h1 {
-  font-size: 38px;
-  font-weight: 400;
+.bottom-section h2 {
+  font-size: 4rem;
+  color: #ccc;
+  text-align: center;
   text-transform: uppercase;
 }
 
-.main-section__block .main-title {
-  font-weight: 900;
-  font-size: 58px;
-  margin: 10px 0px;
+.social-icon-container {
+  display: flex;
+  width: 20%;
+  margin: 10px auto;
+  justify-content: space-around;
 }
 
-.sub-form {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 30%;
+.social-icon {
+  display: inline-block;
 }
 
-.sub-form,
-.error,
-.success {
-  margin: 20px 0;
-}
+@media only screen and (max-width: 1045px) {
+  .main {
+    width: 70%;
+    height: 80%;
+    margin: 5% auto;
+  }
 
-.error {
-  color: tomato;
-}
+  .bottom-section {
+    width: 70%;
+    margin: 5% auto;
+  }
 
-.success {
-  color: green;
-}
+  .bottom-section h2 {
+    font-size: 3rem;
+  }
 
-.sub-form input,
-.sub-form button {
-  display: block;
-  height: 40px;
-  border: none;
-}
-
-.sub-form input {
-  background: #f1f8fa;
-  padding-left: 20px;
-  outline: none;
-}
-
-.sub-form button {
-  background: #6519ff;
-  color: white;
-  font-size: 16px;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-@media only screen and (max-width: 1145px) {
-  .sub-form {
-    width: 90%;
+  .social-icon-container {
+    width: 30%;
+    margin: 5% auto;
   }
 }
 
-@media only screen and (max-width: 928px) {
-  .sub-form {
-    width: 100%;
-    grid-template-columns: auto;
-    margin-top: 50px;
+@media only screen and (max-width: 728px) {
+  .main {
+    width: 80%;
+    margin: 10px auto;
   }
 
-  .sub-form input {
-    background: #ffffff;
+  .bottom-section {
+    width: 80%;
+    margin: 30px auto;
+  }
+
+  .bottom-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .social-icon-container {
+    width: 40%;
+    margin: 40px auto;
   }
 }
