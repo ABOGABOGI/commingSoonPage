@@ -24,14 +24,19 @@ function CustomChatbot(props) {
     headerTitle: "Toga",
     enableMobileAutoFocus: true,
     botDelay: 1500,
+    enableSmoothScroll: true,
+    avatarStyle: {
+      border: "none",
+      boxShadow: "none",
+    },
     botAvatar:
-      "https://res.cloudinary.com/toga-insure/image/upload/v1589457128/CommingSoonPage/togalogoart_uqekbz.jpg",
+      "https://res.cloudinary.com/toga-insure/image/upload/v1589798290/CommingSoonPage/TogaLogo_2x_xhi9a1.png",
   };
   const steps = [
     {
       id: "Greet",
       message:
-        "Hey! I'm Tunde, I'm a team member of an exciting and value driven innovation comming soon",
+        "Hey! I'm Tunde, I'm a team member of an exciting and value driven insurance  innovation comming soon",
       trigger: "Few question",
     },
     {
@@ -47,6 +52,13 @@ function CustomChatbot(props) {
     {
       id: "Waiting user input for name",
       user: true,
+      validator: (value) => {
+        const regExp = /^[a-zA-Z]$/;
+        if (regExp.test(value)) {
+          return "Please type in your First Name";
+        }
+        return true;
+      },
       trigger: "Nice to meet you",
     },
     {

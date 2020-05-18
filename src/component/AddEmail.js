@@ -1,5 +1,6 @@
 import React from "react";
 import CustomChatBot from "./CustomChatBot";
+import ErrorMessage from "./ErrorMessage";
 import { useMutation } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
 
@@ -25,9 +26,13 @@ const AddEmail = () => {
     });
   };
 
-  if (error) return <p className="error">Error: {error.message}</p>;
+  if (error) return <ErrorMessage error={error} />;
 
-  return <CustomChatBot eventHandler={eventHandler} />;
+  return (
+    <main className="main">
+      <CustomChatBot eventHandler={eventHandler} />
+    </main>
+  );
 };
 
 export default AddEmail;
