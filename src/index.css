@@ -161,7 +161,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  overflow: hidden;
 }
 
 .container {
@@ -185,7 +184,6 @@ body {
 
 .bottom-section {
   width: 100%;
-  margin: 10px auto;
 }
 
 .bottom-section h2 {
@@ -210,12 +208,10 @@ body {
   .main {
     width: 70%;
     height: 80%;
-    margin: 5% auto;
   }
 
   .bottom-section {
     width: 70%;
-    margin: 5% auto;
   }
 
   .bottom-section h2 {
@@ -229,22 +225,4 @@ body {
 }
 
 @media only screen and (max-width: 728px) {
-  .main {
-    width: 80%;
-    margin: 10px auto;
-  }
-
-  .bottom-section {
-    width: 80%;
-    margin: 30px auto;
-  }
-
-  .bottom-section h2 {
-    font-size: 2.5rem;
-  }
-
-  .social-icon-container {
-    width: 40%;
-    margin: 40px auto;
-  }
 }
